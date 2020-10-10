@@ -1,0 +1,56 @@
+<div class="w3-panel">
+    <div class="w3-display-container">
+        <a href="#/todo/add" class="w3-button w3-blue w3-display-topright">Add</a>
+        <div class="w3-xlarge">
+            LIST TODO
+        </div>
+    </div>
+</div>
+<div class="w3-panel">
+    <div class="w3-leftbar w3-padding-small w3-light-gray">
+        <div class="w3-container">
+            <label>Keyword</label>
+            <input type="text" id="filterSearch" class="w3-input">
+        </div>
+    </div>
+</div>
+<div class="w3-panel w3-sand">
+    <div class="w3-padding-small">
+        <div>Priority</div>
+        <input type="checkbox" name="cbPriorLow" id="cbPriorLow" class="w3-check" checked>
+        <label for="cbPriorLow">Low</label>
+        <input type="checkbox" name="cbPriorMiddle" id="cbPriorMiddle" class="w3-check" checked>
+        <label for="cbPriorMiddle">Middle</label>
+        <input type="checkbox" name="cbPriorHigh" id="cbPriorHigh" class="w3-check" checked>
+        <label for="cbPriorHigh">High</label>
+    </div>
+    <div class="w3-padding-small">
+        <div>Deadline - range</div>
+        <div class="w3-row">
+            <label class="w3-col s2">From</label>
+            <input type="date" name="rangeDeadlineForm" id="rangeDeadlineForm" class="w3-input w3-col s10">
+        </div>
+        <div class="w3-row">
+            <label class="w3-col s2">To</label>
+            <input type="date" name="rangeDeadlineTo" id="rangeDeadlineTo" class="w3-input w3-col s10">
+        </div>
+    </div>
+</div>
+<div class="w3-container" id="infoList">
+    <div class="w3-container w3-light-gray">
+        <div class="" id="textFilterDiv"></div>
+        <div class="" id="resultFilter"></div>
+    </div>
+</div>
+<ul class="w3-ul w3-container" id="listTodo">
+    {{#list}}
+    <li class="w3-panel w3-light-gray w3-leftbar w3-border-0 {{prior}}" data-prior="{{prior}}" data-timestamp="{{timestamp}}" data-deadline="{{deadline}}">
+        <div class="w3-large">{{title}}</div>
+        <div class="w3-small w3-opacity-min">{{desc}}</div>
+    </li>
+    {{/list}} {{^list}}
+    <li class="w3-panel w3-light-gray">
+        <div class="w3-large w3-center">No data found</div>
+    </li>
+    {{/list}}
+</ul>

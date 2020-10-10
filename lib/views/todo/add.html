@@ -1,0 +1,57 @@
+<div class="w3-panel">
+    <div class="w3-light-gray">
+        <div class="w3-container w3-xlarge">
+            <h3 class="">FORM ADD NEW TODO</h3>
+        </div>
+        <ul class="w3-ul">
+            <form id="formAdd">
+                <li class="w3-border-0">
+                    <label for="">Title</label>
+                    <input type="text" name="title" id="title" class="w3-input" autocomplete="off" required autofocus minlength="4" maxlength="100" aria-required="true">
+                    <small class="">* Min 4 and max 100 charakter.</small>
+                </li>
+                <li class="w3-border-0">
+                    <label for="">Description</label>
+                    <input type="text" name="desc" id="desc" class="w3-input" autocomplete="off" required minlength="10" maxlength="100" aria-required="false">
+                    <small class="">* Min 10 and max 100 charakter.</small>
+                </li>
+                <li class="w3-border-0">
+                    <label for="">Priority</label>
+                    <select name="prior" id="prior" class="w3-select" required>
+                        <option value="" disabled selected>Choose</option>
+                        <option value="low">Low</option>
+                        <option value="middle">Middle</option>
+                        <option value="high">High</option>
+                    </select>
+                    <small class="">* Must choose one</small>
+                </li>
+                <li class="w3-border-0">
+                    <label for="">Group</label>
+                    <input list="groupList" name="group" id="group" class="w3-input" autocomplete="off" required>
+                    <small></small>
+                    <datalist id="groupList">
+                        <option value="job"></option>
+                        <option value="family"></option>
+                        <option value="self"></option>
+                    </datalist>
+                </li>
+                <li class="w3-border-0">
+                    <label for="">Deadline</label>
+                    <input type="date" name="deadline-date" id="deadline-date" class="w3-input" required>
+                    <small></small>
+                    <input type="time" name="deadline-time" id="deadline-time" class="w3-input" required>
+                    <small></small>
+
+                </li>
+                <li class="w3-border-0">
+                    <input type="checkbox" name="looping" id="looping" value="false" class="w3-check">
+                    <label for="">Looping</label>
+                </li>
+                <li class="w3-border-0">
+                    <button class="w3-button w3-green" type="submit">Add</button>
+                    <button class="w3-button w3-orange" type="reset">Reset</button>
+                </li>
+            </form>
+        </ul>
+    </div>
+</div>
