@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO PROJECT</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="w3-bar w3-black w3-xlarge">
+        <a href="#/" class="w3-bar-item">
+            TODO PROJECT
+        </a>
+        <a href="#/todo" class="w3-bar-item w3-right">
+            Todo
+        </a>
+    </header>
+    <div id="msg" class="w3-display-middle w3-animate-zoom"></div>
+    <main id="app"></main>
+
+
+
+    <!-- Javascript -->
+    <script src="./js/mustache.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script>
+        function w3_close(e) {
+            e.parentElement.parentElement.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
